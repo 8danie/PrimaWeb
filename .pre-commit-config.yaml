@@ -1,0 +1,30 @@
+# Configuration pre-commit pour le projet PrimaWeb
+# Documentation : https://pre-commit.com
+
+repos:
+  # 1. Vérifications d'intégrité, de syntaxe et de sécurité
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: '(\.(html|svg|pdf)|next-env\.d\.ts)$'
+      - id: end-of-file-fixer
+        exclude: '(\.(html|svg|pdf)|next-env\.d\.ts)$'
+      - id: check-yaml
+        args: ['--unsafe']
+      - id: check-json
+      - id: check-added-large-files
+        args: ['--maxkb=2500']
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: detect-private-key
+
+  # 2. Formatage et Linting Python (Backend Django DRF)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.5.5
+    hooks:
+      - id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+        files: ^backend/
+      - id: ruff-format
+        files: ^backend/

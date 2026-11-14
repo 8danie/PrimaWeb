@@ -1,0 +1,43 @@
+# Environment & Secrets
+.env
+.env.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.sqlite3
+*.log
+
+# Node & Next.js
+node_modules/
+frontend/node_modules/
+.next/
+frontend/.next/
+out/
+build/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Static & Uploaded Media
+backend/staticfiles/
+backend/media/
+
+# Docker volumes & local data
+postgres_data/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
