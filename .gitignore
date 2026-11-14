@@ -41,3 +41,6 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# GitHub Workflows (décommenter si le token a le scope 'workflow')
+.github/
